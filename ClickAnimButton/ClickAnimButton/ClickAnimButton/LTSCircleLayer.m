@@ -49,12 +49,12 @@
 
 -(void)initLayer{
     self.shapeLayer = [CAShapeLayer layer];
+    self.shapeLayer.fillColor = [UIColor clearColor].CGColor;
     [self addSublayer:self.shapeLayer];
 }
 
 -(void)startAnim{
     self.shapeLayer.strokeColor = self.animParams.circleColor.CGColor;
-    self.shapeLayer.fillColor = [UIColor clearColor].CGColor;
     self.shapeLayer.lineWidth = self.animParams.circleWidth;
 //变形动画
     CABasicAnimation *baseAnim = [CABasicAnimation animationWithKeyPath:@"path"];
